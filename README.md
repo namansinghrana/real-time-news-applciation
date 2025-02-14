@@ -1,4 +1,5 @@
 # Real-Time News Application
+![Image](https://github.com/user-attachments/assets/de5a28aa-fd03-4118-a9c0-9fffaaa1367e)
 
 ## Overview
 This is a real-time news application built with the MERN stack (MongoDB, Express, React, Node.js). It allows users to view the latest news articles in real-time.
@@ -49,8 +50,6 @@ Once the server and client are running, you can access the application at `http:
 ## Deployment
 To deploy this application, you can use platforms like Heroku, Vercel, or Netlify. Follow their documentation for deployment instructions.
 
-# Real-Time News Application Deployment
-
 ## Introduction
 This document explains how to deploy the Real-Time News Application using Docker and Kubernetes. This guide will help you understand the deployment process and showcase it to recruiters.
 
@@ -69,58 +68,6 @@ Run the Docker container using the following command:
 docker run -p 3000:3000 real-time-news-app
 ```
 ![Docker Run](./images/docker-run.png)
-
-## Kubernetes Deployment
-
-### Step 1: Create Kubernetes Deployment and Service Files
-Create a deployment file `deployment.yaml` and a service file `service.yaml` with the following content:
-
-#### deployment.yaml
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: real-time-news-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: real-time-news-app
-  template:
-    metadata:
-      labels:
-        app: real-time-news-app
-    spec:
-      containers:
-      - name: real-time-news-app
-        image: real-time-news-app:latest
-        ports:
-        - containerPort: 3000
-```
-
-#### service.yaml
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: real-time-news-app-service
-spec:
-  selector:
-    app: real-time-news-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: LoadBalancer
-```
-
-### Step 2: Apply the Kubernetes Files
-Apply the deployment and service files to your Kubernetes cluster using the following commands:
-```sh
-kubectl apply -f deployment.yaml
-kubectl apply -f service.yaml
-```
-![Kubernetes Apply](./images/kubernetes-apply.png)
 
 ## Conclusion
 This guide provided a step-by-step process to deploy the Real-Time News Application using Docker and Kubernetes. By following these steps, you can demonstrate your ability to deploy applications in a containerized environment to recruiters.

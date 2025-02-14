@@ -6,6 +6,10 @@ import useFetchData from "@/hooks/useFetchData"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock, ExternalLink } from "lucide-react"
+import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
+
+
+const queryClient = new QueryClient();
 
 const Index = () => {
   const [userId, setUserId] = useState<string | null>(null)
@@ -45,12 +49,13 @@ const Index = () => {
 
       <div className="grid gap-8 md:grid-cols-[400px,1fr] items-start">
         <aside className="space-y-6">
-          <SubscriptionManager
-            userId={userId}
-            onSubscriptionChange={() => {
-              // Optionally trigger re-fetch
-            }}
-          />
+        <SubscriptionManager
+        userId={userId}
+        onSubscriptionChange={() => {
+        queryClient.invalidateQueries({ queryKey: ["fetchData"] }); // Refetch the news feed data
+        }}
+        />
+
         </aside>
         <main className="space-y-6">
           <NewsFeed userId={userId} />

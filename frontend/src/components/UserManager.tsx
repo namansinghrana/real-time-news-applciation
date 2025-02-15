@@ -22,7 +22,7 @@ export const UserManager = ({ onUserSet, currentUserId }: UserManagerProps) => {
       setLoading(true);
       try {
         // Send request to backend
-        const response = await axios.post("https://real-time-news-application-production.up.railway.app/api/user", { userId });
+        const response = await axios.post("https://real-time-news-applciation-production.up.railway.app/api/user", { userId });
 
         if (response.status === 200) {
           onUserSet(userId.trim());

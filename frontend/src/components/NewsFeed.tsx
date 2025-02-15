@@ -22,7 +22,7 @@ export const NewsFeed = ({ userId }: NewsFeedProps) => {
 
   useEffect(() => {
     // Connect to the backend WebSocket server
-    const newSocket = io("https://real-time-news-application-production.up.railway.app", {
+    const newSocket = io("https://real-time-news-applciation-production.up.railway.app", {
       transports: ["websocket"], // Use WebSockets only for real-time efficiency
     });
 

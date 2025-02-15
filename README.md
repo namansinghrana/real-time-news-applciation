@@ -1,4 +1,5 @@
 # Real-Time News Application
+![Image](https://github.com/user-attachments/assets/90513687-0545-4626-9d34-c7a8f57ea316)
 ![Image](https://github.com/user-attachments/assets/de5a28aa-fd03-4118-a9c0-9fffaaa1367e)
 
 ## Overview

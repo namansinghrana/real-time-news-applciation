@@ -50,6 +50,7 @@ Once the server and client are running, you can access the application at `http:
 ## Snapshots
 
 <img width="959" alt="Image" src="https://github.com/user-attachments/assets/5779c262-9328-46af-a80f-606931b0aab1" />
+
 ![Image](https://github.com/user-attachments/assets/de5a28aa-fd03-4118-a9c0-9fffaaa1367e)
 
 ## Deployment

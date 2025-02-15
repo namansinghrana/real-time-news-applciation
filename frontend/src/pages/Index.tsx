@@ -78,10 +78,6 @@ const Index = () => {
                         </div>
                         <p className="text-sm text-muted-foreground line-clamp-2 mb-2">{item.description}</p>
                         <div className="flex justify-between items-center text-sm text-muted-foreground">
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-1" />
-                            {new Date(item.publishedAt).toLocaleDateString()}
-                          </div>
                           <a
                             href={item.url}
                             target="_blank"

@@ -1,6 +1,5 @@
 # Real-Time News Application
 ![Image](https://github.com/user-attachments/assets/90513687-0545-4626-9d34-c7a8f57ea316)
-![Image](https://github.com/user-attachments/assets/de5a28aa-fd03-4118-a9c0-9fffaaa1367e)
 
 ## Overview
 This is a real-time news application built with the MERN stack (MongoDB, Express, React, Node.js). It allows users to view the latest news articles in real-time.
@@ -47,6 +46,11 @@ To run this project locally, follow these steps:
 
 ## Usage
 Once the server and client are running, you can access the application at `http://localhost:3000`.
+
+## Snapshots
+
+<img width="959" alt="Image" src="https://github.com/user-attachments/assets/5779c262-9328-46af-a80f-606931b0aab1" />
+![Image](https://github.com/user-attachments/assets/de5a28aa-fd03-4118-a9c0-9fffaaa1367e)
 
 ## Deployment
 To deploy this application, you can use platforms like Heroku, Vercel, or Netlify. Follow their documentation for deployment instructions.

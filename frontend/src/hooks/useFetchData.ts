@@ -14,7 +14,7 @@ const useFetchData = () => {
   return useQuery<NewsItem[]>({
     queryKey: ["fetchData"],
     queryFn: async () => {
-      const { data } = await axios.get("http://localhost:5000/api/news");
+      const { data } = await axios.get("https://real-time-news-application-production.up.railway.app/api/news");
       return data;
     },
     staleTime: 1000 * 60 * 5, // Cache data for 5 minutes

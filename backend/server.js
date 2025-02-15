@@ -15,7 +15,11 @@ dotenv.config();
 connectDB(); // Connect to MongoDB
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ["https://real-time-news-applciation.vercel.app", "http://localhost:8080"], // Update with your actual frontend URL
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
 app.use(express.json());
 
 // Create HTTP server and WebSocket
